@@ -18,6 +18,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     TEST = False
     PROD = False
+    SWAGGER_UI_DOC_EXPANSION = 'list'
 
 
 class UnitTestConfig(Config):
