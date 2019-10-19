@@ -14,6 +14,7 @@ def init(config_obj):
 
     blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
     api_proxy.init(blueprint)
-
     flask_app.register_blueprint(blueprint)
-    flask_app.run(host=app_config.CONFIG.SERVER_HOST, port=app_config.CONFIG.SERVER_PORT)
+
+    return flask_app
+    # flask_app.run(host=app_config.CONFIG.SERVER_HOST, port=app_config.CONFIG.SERVER_PORT)
