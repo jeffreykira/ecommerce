@@ -1,4 +1,16 @@
 import logging
+from enum import Enum
+
+
+class BaseEnum(Enum):
+
+    @classmethod
+    def to_list(cls):
+        return list(map(lambda x: x.value, cls))
+
+    @classmethod
+    def to_tuple(cls):
+        return tuple(map(lambda x: x.value, cls))
 
 
 def log_scope(log):

@@ -6,11 +6,6 @@ from ecommerce.api.api_proxy import api
 
 product_filter = abstract_model.page_filter.copy()
 
-category = api.model('category', {
-    'id': fields.List(fields.Float, required=True, description='coordinate: [x1, y1, x2, y2]', example=[11.5, 33.9, 555, 888.2]),
-    'name': fields.Float(description='threshold', example=0.85)
-})
-
 product_query = api.model('product_query', {
     'id': fields.Integer(required=True, description='product id', example=1),
     'name': fields.String(required=True, description='product name', example='BMW'),

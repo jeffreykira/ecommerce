@@ -1,6 +1,5 @@
 import logging
 from ecommerce import util
-from ecommerce import app_config
 from ecommerce.api import api_proxy
 from flask import Flask, Blueprint, request, g
 
