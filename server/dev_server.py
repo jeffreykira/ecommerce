@@ -10,6 +10,7 @@ try:
 
     app = app.init(app_config.CONFIG)
     app.run(host=app_config.CONFIG.SERVER_HOST, port=app_config.CONFIG.SERVER_PORT)
+    # app.run(host=app_config.CONFIG.SERVER_HOST)
 except Exception:
     import traceback
     traceback.print_exc()
