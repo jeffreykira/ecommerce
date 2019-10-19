@@ -17,4 +17,3 @@ def init(config_obj):
     flask_app.register_blueprint(blueprint)
 
     return flask_app
-    # flask_app.run(host=app_config.CONFIG.SERVER_HOST, port=app_config.CONFIG.SERVER_PORT)
