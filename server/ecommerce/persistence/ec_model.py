@@ -4,7 +4,8 @@ from playhouse.postgres_ext import *
 from ecommerce import util
 from ecommerce.persistence import model_common
 
-__all__ = []
+__all__ = ['database_proxy', 'DB_NAME', 'Category', 'Product', 'Product_Category',
+           'Order', 'Order_Product', 'open_connection', 'close_connection', 'init']
 
 log = logging.getLogger(__name__)
 database_proxy = Proxy()

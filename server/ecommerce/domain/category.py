@@ -1,5 +1,4 @@
 import logging
-import psycopg2
 from peewee import DoesNotExist, IntegrityError
 from ecommerce import util
 from ecommerce.exception import *
