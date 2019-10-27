@@ -1,7 +1,6 @@
 import logging
 from flask import request
 from flask_restplus import Resource
-from ecommerce.exception import *
 from ecommerce.api import category_endpoint_model as model
 from ecommerce.api.api_proxy import api
 from ecommerce.domain import category as CategoryDO

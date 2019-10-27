@@ -23,7 +23,7 @@ def create(name, image, price, brief='', description='', category_id_collection=
             try:
                 category = Category.get(Category.id == category_id)
             except DoesNotExist:
-                raise ResourceNotFound('category id: {}'.format(category_id))
+                raise DataValidationError('category id: {}'.format(category_id))
 
             Product_Category.create(product=product, category=category)
 
@@ -108,11 +108,11 @@ def do_update(product_id, name='', image='', price=0, brief='', description='', 
                 try:
                     category = Category.get(Category.id == category_id)
                 except DoesNotExist:
-                    raise ResourceNotFound('category id: {}'.format(category_id))
+                    raise DataValidationError('category id: {}'.format(category_id))
 
                 Product_Category.create(product=product, category=category)
 
-        modified_date = util.current_time()
+        product.modified_date = util.current_time()
         product.save()
         log.debug('product saved: {}'.format(product))
 

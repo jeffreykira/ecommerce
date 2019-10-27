@@ -31,7 +31,7 @@ class Collection(Resource):
     @api.expect(model.product_create, validate=True)
     @api.marshal_with(model.product_id, code=201)
     @api.response(201, 'Success')
-    @api.response(404, 'ResourceNotFound')
+    @api.response(403, 'DataValidationError')
     def post(self):
         '''
         Create a new product.
@@ -54,6 +54,7 @@ class Item(Resource):
 
     @api.expect(model.product_reapply, validate=True)
     @api.response(204, 'Success')
+    @api.response(403, 'DataValidationError')
     @api.response(404, 'ResourceNotFound')
     def put(self, id):
         '''

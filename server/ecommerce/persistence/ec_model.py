@@ -56,10 +56,10 @@ class Product_Category(BaseModel):
 
 class Order(BaseModel):
     id = AutoField()
-    customer_name = CharField()
-    customer_phone = CharField()
-    customer_addr = CharField()
-    customer_email = CharField()
+    cust_name = CharField()
+    cust_phone = CharField()
+    cust_addr = CharField()
+    cust_email = CharField()
     payment_type = CharField(index=True)
     total = IntegerField(index=True)
     status = CharField(index=True, constraints=[Check('status IN (\'Unpaid\', \'Unshipped\', \'Shipped\', \'Complete\')')])
