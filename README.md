@@ -25,5 +25,5 @@ git subtree push --prefix {your_folder} heroku master
 ```
 git push heroku `git subtree split --prefix {your_folder} master`:master --force
 
-# than used step2
+# then use step2
 ```
