@@ -20,3 +20,9 @@ heroku git:remote -a {your_heroku_app_name}
 ```
 git subtree push --prefix {your_folder} heroku master
 ```
+
+- if subtree up-to-date but can't push
+```
+git push heroku `git subtree split --prefix {your_folder} master`:master --force
+```
+  than used step2
