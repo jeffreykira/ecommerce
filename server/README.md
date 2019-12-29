@@ -7,12 +7,12 @@
 4. PostgreSQL
 
 ## local test
-1. python dev_server.py
+1. python server.py
 2. api doc
 ```
 http://127.0.0.1:5604/api/v1/
 ```
-3. database interface
+3. database admin interface
 ```
 http://127.0.0.1:5604/admin
 ```
