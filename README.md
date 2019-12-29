@@ -1,5 +1,10 @@
-# ecommerce
+# ecommerce-server
 
+## Demo on Heroku
+- swagger api doc
+    https://live-ecommerce-server.herokuapp.com/api/v1/
+- database admin interface
+    https://live-ecommerce-server.herokuapp.com/admin/category/
 
 ## Server environment dependency
 1. python3
